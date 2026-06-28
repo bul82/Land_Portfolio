@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BUL82 Web - лендинги, которые приводят заявки</title>
+    <meta name="description" content="Разработка лендингов, сайтов услуг и каталогов под ключ. Отдельно - AI-агенты для заявок, задач и клиентской переписки.">
+    <link rel="canonical" href="https://bul82info.ru/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="m15 15 4 4"></path></symbol>
+      <symbol id="icon-brush" viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6l8-8Z"></path><path d="M5 20h7"></path></symbol>
+      <symbol id="icon-proof" viewBox="0 0 24 24"><path d="M5 19V5h14v14H5Z"></path><path d="m8 13 3 3 5-7"></path></symbol>
+      <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M8 16c-2 0-4 2-4 4 2 0 4-2 4-4Z"></path><path d="M9 15 6 12l6-6c2-2 5-2 6-2 0 1 0 4-2 6l-6 6-1-1Z"></path><path d="M14 6h4v4"></path></symbol>
+      <symbol id="icon-video" viewBox="0 0 24 24"><path d="M4 7h12v10H4V7Z"></path><path d="m16 10 5-3v10l-5-3"></path></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><path d="M4 5h16v14H4V5Z"></path><path d="m7 16 4-5 3 4 2-2 3 3"></path><circle cx="8" cy="8" r="1"></circle></symbol>
+      <symbol id="icon-cursor" viewBox="0 0 24 24"><path d="m5 4 14 7-6 2-2 6L5 4Z"></path></symbol>
+      <symbol id="icon-layout" viewBox="0 0 24 24"><path d="M4 5h16v14H4V5Z"></path><path d="M4 10h16M10 10v9"></path></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m9 8-4 4 4 4"></path><path d="m15 8 4 4-4 4"></path></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></symbol>
+      <symbol id="icon-pen" viewBox="0 0 24 24"><path d="M4 20h5l11-11-5-5L4 15v5Z"></path><path d="m13 6 5 5"></path></symbol>
+    </svg>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="BUL82 Web">
+        <span>BUL82</span><i></i>
+      </a>
+      <nav class="desktop-nav" aria-label="Навигация">
+        <a href="#portfolio">Сайты</a>
+        <a href="#ai-agents">AI-агенты</a>
+        <a href="#approach">Подход</a>
+        <a href="#packages">Цены</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+      <a class="header-cta" href="#contact">Обсудить проект</a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu>
+      <a href="#portfolio">Сайты</a>
+      <a href="#ai-agents">AI-агенты</a>
+      <a href="#approach">Подход</a>
+      <a href="#packages">Цены</a>
+      <a href="#contact">Контакт</a>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="badge"><span></span> Сайты под заявки + AI-агенты отдельно</p>
+            <h1>Сайты, которые выглядят <span class="text-coral">дорого</span> и приводят заявки.</h1>
+            <p class="hero-lead">Основное направление - лендинги, сайты услуг и каталоги под ключ. AI-агентов делаю отдельной услугой, когда нужно автоматизировать заявки, задачи и переписку.</p>
+            <p class="hero-note">Запускаю сайт, который можно сразу показывать клиентам, рекламе и партнерам.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#portfolio">Смотреть проекты</a>
+              <a class="button secondary" href="#contact">Получить оценку</a>
+            </div>
+            <div class="hero-trust" aria-label="Что важно в работе">
+              <div><strong>Живые демо</strong><span>можно открыть реальные сайты</span></div>
+              <div><strong>Смысл + визуал</strong><span>сначала оффер, потом картинка</span></div>
+              <div><strong>AI отдельно</strong><span>если нужен агент для заявок и задач</span></div>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Превью портфолио">
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+                <small>bul82.web/showcase</small>
+              </div>
+              <img src="assets/generated/portfolio-hero.jpg" alt="Премиальная витрина веб-проектов">
+            </div>
+          </div>
+        </div>
+        <div class="container proof-row" aria-label="Преимущества">
+          <div><b>4 + web app</b><span>сайты и рабочая Telegram-система</span></div>
+          <div><b>3-14 дней</b><span>обычный срок запуска</span></div>
+          <div><b>Оптимизация</b><span>быстро открывается с любого устройства</span></div>
+          <div><b>индивидуально</b><span>дизайн и код под вашу задачу</span></div>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">01 /</span>
+              <h2>Сайты и лендинги</h2>
+            </div>
+            <p>Здесь только сайты: лендинги, сайт услуг и каталог. Каждый кейс можно открыть и посмотреть вживую.</p>
+          </div>
+          <div class="filters" aria-label="Фильтр проектов">
+            <button class="filter active" type="button" data-filter="all">Все</button>
+            <button class="filter" type="button" data-filter="landing">Лендинги</button>
+            <button class="filter" type="button" data-filter="catalog">Каталоги</button>
+          </div>
+          <div class="works-grid">
+            <article class="case-card featured-case has-video" data-category="landing">
+              <a href="https://bul82info.ru/land-grooming/" target="_blank" rel="noreferrer">
+                <div class="case-media">
+                  <video src="assets/portfolio/fluff-care.webm" poster="assets/portfolio/fluff-care-ai.jpg" muted loop playsinline preload="metadata" aria-label="Превью Fluff & Care"></video>
+                  <img src="assets/portfolio/fluff-care-ai.jpg" alt="Fluff & Care">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>01</span><b>Лендинг услуг</b></div>
+                  <h3>Fluff & Care</h3>
+                  <p>Груминг-салон: услуги по породам, прайс, мастера, before/after и онлайн-запись.</p>
+                  <ul><li>Больше записей</li><li>Понятный прайс</li><li>До/после</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Быстро объяснить услуги и убрать сомнения перед записью.</span>
+                    <span><b>Что сделали</b>Прайс, мастера, результаты, маршрут до онлайн-записи.</span>
+                    <span><b>Заявка</b>Клиент видит цену, доверяет мастеру и понимает следующий шаг.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>услуга - цена - запись</span>
+                    <span><b>Доверие</b>мастера и результаты</span>
+                  </div>
+                  <span class="case-open">Открыть сайт</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="case-card has-video" data-category="landing">
+              <a href="https://bul82info.ru/land-lang/" target="_blank" rel="noreferrer">
+                <div class="case-media">
+                  <video src="assets/portfolio/liberty-academy.webm" poster="assets/portfolio/liberty-academy-ai.jpg" muted loop playsinline preload="metadata" aria-label="Превью Liberty Academy"></video>
+                  <img src="assets/portfolio/liberty-academy-ai.jpg" alt="Liberty Academy">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>02</span><b>Education</b></div>
+                  <h3>Liberty Academy</h3>
+                  <p>Платформа подготовки к США: тест уровня, преподаватели, расписание, тарифы и личный кабинет.</p>
+                  <ul><li>Тест уровня</li><li>Больше доверия</li><li>Кабинет</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Показать путь обучения и снять тревогу перед стартом.</span>
+                    <span><b>Что сделали</b>Тест уровня, тарифы, преподаватели, расписание и кабинет.</span>
+                    <span><b>Заявка</b>Посетитель понимает формат и быстрее выбирает следующий шаг.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>тест - курс - заявка</span>
+                    <span><b>Доверие</b>преподаватели и формат</span>
+                  </div>
+                  <span class="case-open">Открыть сайт</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="case-card has-video" data-category="catalog">
+              <a href="https://bul82info.ru/tea-seeds-demo/" target="_blank" rel="noreferrer">
+                <div class="case-media">
+                  <video src="assets/portfolio/tea-seeds.webm" poster="assets/portfolio/tea-seeds-ai.jpg" muted loop playsinline preload="metadata" aria-label="Превью Tea Seeds Demo"></video>
+                  <img src="assets/portfolio/tea-seeds-ai.jpg" alt="Tea Seeds Demo">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>03</span><b>Telegram-каталог</b></div>
+                  <h3>Tea Seeds Demo</h3>
+                  <p>Каталог товаров с фильтрами, корзиной, оформлением заказа, уведомлениями и админкой.</p>
+                  <ul><li>Заказ без звонков</li><li>Учет товаров</li><li>Админка</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Собрать простой заказ без ручной переписки по каждому товару.</span>
+                    <span><b>Что сделали</b>Каталог, фильтры, корзину, заказ, уведомления и админку.</span>
+                    <span><b>Заявка</b>Покупатель выбирает товар и оформляет заказ без лишних действий.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>каталог - корзина - заказ</span>
+                    <span><b>Доверие</b>понятный ассортимент</span>
+                  </div>
+                  <span class="case-open">Открыть сайт</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="case-card has-video" data-category="landing">
+              <a href="https://bul82info.ru/land-lawyer/" target="_blank" rel="noreferrer">
+                <div class="case-media">
+                  <video src="assets/portfolio/land-lawyer.webm" poster="assets/portfolio/land-lawyer-ai.jpg" muted loop playsinline preload="metadata" aria-label="Превью Земельный юрист"></video>
+                  <img src="assets/portfolio/land-lawyer-ai.jpg" alt="Земельный юрист">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>04</span><b>Юридический лендинг</b></div>
+                  <h3>Земельный юрист</h3>
+                  <p>Сайт для юридической помощи по земельным вопросам: услуги, кейсы, документы и консультация.</p>
+                  <ul><li>Доверие</li><li>Практики</li><li>Заявка</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Объяснить сложные юридические услуги простым языком.</span>
+                    <span><b>Что сделали</b>Практики, кейсы, документы, консультацию и понятные CTA.</span>
+                    <span><b>Заявка</b>Клиент находит свою проблему и видит безопасный первый шаг.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>проблема - практика - консультация</span>
+                    <span><b>Доверие</b>документы и кейсы</span>
+                  </div>
+                  <span class="case-open">Открыть сайт</span>
+                </div>
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section ai-agents" id="ai-agents">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">02 /</span>
+              <h2>AI-агенты</h2>
+            </div>
+            <p>Это отдельная услуга: не сайт, а помощник для переписки, заявок, задач и памяти по клиентам.</p>
+          </div>
+          <div class="ai-stack">
+            <article class="ai-showcase has-video">
+              <a href="#contact">
+                <div class="case-media">
+                  <video src="assets/portfolio/mika-agent.webm" poster="assets/portfolio/mika-agent-ai.jpg" muted loop playsinline preload="metadata" aria-label="Превью AI-агента Мика"></video>
+                  <img src="assets/portfolio/mika-agent-ai.jpg" alt="AI-агент Мика">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>AI</span><b>Бизнес-ассистент</b></div>
+                  <h3>Мика</h3>
+                  <p>AI-помощник для Telegram Business: видит заявки, выделяет горячих лидов, ведет карточки клиентов и собирает повестку дня.</p>
+                  <ul><li>Лиды</li><li>Задачи</li><li>Память</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Не терять входящие сообщения, обещания и следующие шаги по клиентам.</span>
+                    <span><b>Что делает</b>Задачи, лиды, карточки контактов, бриф дня, календарь и поиск по памяти.</span>
+                    <span><b>Польза</b>Мика подсказывает, кому ответить, что обещали и что важно сделать сегодня.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>сообщение - лид - действие</span>
+                    <span><b>Отдельно от сайта</b>можно подключить к действующему бизнесу</span>
+                  </div>
+                  <span class="case-open">Обсудить AI-агента</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="ai-showcase product-case has-video">
+              <a href="https://bul82info.ru/tg-club/" target="_blank" rel="noreferrer">
+                <div class="case-media">
+                  <video src="assets/portfolio/tg-club-miniapp-crm.webm" poster="assets/portfolio/tg-club-miniapp-crm-card.png" muted loop playsinline preload="metadata" aria-label="Превью Invest Club Gate"></video>
+                  <img src="assets/portfolio/tg-club-miniapp-crm-card.png" alt="Telegram Mini App и CRM с AI-скорингом заявок">
+                </div>
+                <div class="case-info">
+                  <div class="case-meta"><span>WEB APP</span><b>Telegram Mini App + CRM</b></div>
+                  <h3>Invest Club Gate</h3>
+                  <p>Система для закрытого клуба: бот открывает mini app, клиент отправляет заявку, CRM оценивает лида и ведет историю действий.</p>
+                  <ul><li>Telegram bot</li><li>AI-скоринг</li><li>CRM-таймлайн</li></ul>
+                  <div class="case-details">
+                    <span><b>Задача</b>Принимать заявки в закрытое сообщество и быстро понимать, кого брать в работу первым.</span>
+                    <span><b>Что сделали</b>Mini app, SQLite CRM, webhook, CSV-экспорт, статусы, автосообщения и AI qualification.</span>
+                    <span><b>Польза</b>Админ видит качество лида, следующий шаг и всю историю заявки в одной карточке.</span>
+                  </div>
+                  <div class="case-impact">
+                    <span><b>Маршрут</b>бот - заявка - скоринг - статус</span>
+                    <span><b>Запуск</b>VPS, HTTPS, Docker, Telegram webhook</span>
+                  </div>
+                  <span class="case-open">Открыть web app</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section philosophy" id="approach">
+        <div class="container philosophy-grid">
+          <div>
+            <span class="section-num">03 /</span>
+            <h2>Подход без шаблонов</h2>
+            <p class="large-text">Сайт должен быстро объяснять, что вы продаете, почему вам можно доверять и что делать дальше.</p>
+            <div class="feature-row">
+              <div><b>Сначала смысл</b><span>Ниша, клиенты, конкуренты и причины покупки.</span></div>
+              <div><b>Потом визуал</b><span>Стиль под задачу: от сервиса до премиального каталога.</span></div>
+            </div>
+          </div>
+          <div class="side-image">
+            <img src="assets/generated/portfolio-card.jpg" alt="Деталь дизайн-системы">
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">04 /</span>
+              <h2>Что входит</h2>
+            </div>
+            <p>От упаковки смысла до запуска сайта и передачи доступов.</p>
+          </div>
+          <div class="service-grid">
+            <article><svg class="tile-icon"><use href="#icon-target"></use></svg><span>01</span><h3>Маркетинг</h3><p>Понимаем аудиторию, конкурентов, оффер и причины для покупки.</p></article>
+            <article><svg class="tile-icon"><use href="#icon-layout"></use></svg><span>02</span><h3>Дизайн</h3><p>Делаем стиль под вашу нишу, а не универсальный шаблон.</p></article>
+            <article><svg class="tile-icon"><use href="#icon-code"></use></svg><span>03</span><h3>Разработка</h3><p>Собираем адаптив, формы, анимации, интеграции и скорость.</p></article>
+            <article><svg class="tile-icon"><use href="#icon-rocket"></use></svg><span>04</span><h3>Запуск</h3><p>Подключаем домен, аналитику, цели, SEO и передаем доступы.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scorecard" id="scorecard">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">05 /</span>
+              <h2>Что измеряем</h2>
+            </div>
+            <p>У лендинга есть понятные признаки качества. Я смотрю не только на красоту, но и на путь к заявке.</p>
+          </div>
+          <div class="metric-grid">
+            <article>
+              <small>01</small>
+              <h3>Первый экран</h3>
+              <p>За 5 секунд понятно, что вы продаете, кому это нужно и почему стоит остаться.</p>
+              <b>Улучшаем: оффер, заголовок, визуальный фокус.</b>
+            </article>
+            <article>
+              <small>02</small>
+              <h3>Доверие</h3>
+              <p>Кейсы, фото, документы, отзывы, цифры и реальные интерфейсы видны до формы заявки.</p>
+              <b>Улучшаем: доказательства и порядок блоков.</b>
+            </article>
+            <article>
+              <small>03</small>
+              <h3>Путь к заявке</h3>
+              <p>Посетитель не ищет, куда нажать: кнопки, формы и контакты появляются в нужных местах.</p>
+              <b>Улучшаем: CTA, форму и сценарии клика.</b>
+            </article>
+            <article>
+              <small>04</small>
+              <h3>Скорость</h3>
+              <p>Сайт быстро открывается с телефона, не рассыпается и не заставляет ждать тяжелые медиа.</p>
+              <b>Улучшаем: изображения, видео и код.</b>
+            </article>
+          </div>
+          <div class="audit-strip">
+            <p>Перед запуском прохожу страницу как клиент: понимаю ли предложение, верю ли кейсам, вижу ли цену и могу ли оставить заявку без лишних действий.</p>
+            <a class="button primary" href="#contact">Проверить мой проект</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visual-upgrade">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">06 /</span>
+              <h2>Почему сайт выглядит дороже</h2>
+            </div>
+            <p>Показываем продукт, интерфейс, людей и результат. Без декоративного шума.</p>
+          </div>
+          <div class="service-grid three">
+            <article><svg class="tile-icon"><use href="#icon-video"></use></svg><span>01</span><h3>Видео в hero</h3><p>Короткий loop сразу показывает услугу или интерфейс в действии.</p></article>
+            <article><svg class="tile-icon"><use href="#icon-image"></use></svg><span>02</span><h3>Единые картинки</h3><p>Один свет, цвет и ракурс. Проект выглядит аккуратнее.</p></article>
+            <article><svg class="tile-icon"><use href="#icon-cursor"></use></svg><span>03</span><h3>Живые функции</h3><p>Тест, кабинет, корзина, админка и запись видны прямо в кейсе.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section packages" id="packages">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">07 /</span>
+              <h2>Форматы работы</h2>
+            </div>
+            <p>Можно начать быстро или сразу собрать полноценную систему продаж.</p>
+          </div>
+          <div class="price-grid">
+            <article class="price-card">
+              <p>Start</p><h3>Лендинг для проверки спроса</h3><strong>от 30 000 ₽</strong>
+              <ul><li>До 5 экранов</li><li>Оффер, структура, тексты</li><li>Форма заявки и Telegram</li><li>Адаптив и базовое SEO</li></ul>
+              <a class="button secondary" href="#contact">Обсудить</a>
+            </article>
+            <article class="price-card featured">
+              <p>Business</p><h3>Сайт услуг под ключ</h3><strong>от 60 000 ₽</strong>
+              <ul><li>До 10-12 смысловых блоков</li><li>Портфолио, квиз, калькулятор</li><li>CRM, Метрика, цели</li><li>30 дней поддержки после запуска</li></ul>
+              <a class="button primary" href="#contact">Хочу такой</a>
+            </article>
+            <article class="price-card">
+              <p>AI Agent</p><h3>AI-агент для заявок и задач</h3><strong>от 110 000 ₽</strong>
+              <ul><li>Отдельная услуга, не часть лендинга</li><li>Telegram Business, CRM или почта</li><li>Память по клиентам и задачам</li><li>Сценарии под ваш процесс</li></ul>
+              <a class="button secondary" href="#contact">Оценить задачу</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">08 /</span>
+              <h2>Как идет работа</h2>
+            </div>
+            <p>Каждый этап заканчивается понятным результатом.</p>
+          </div>
+          <ol class="process-grid">
+            <li><svg class="tile-icon"><use href="#icon-search"></use></svg><span>01</span><h3>Диагностика</h3><p>Разбираем услугу, аудиторию, конкурентов и цель заявки.</p></li>
+            <li><svg class="tile-icon"><use href="#icon-pen"></use></svg><span>02</span><h3>Структура</h3><p>Собираем блоки, тексты, доказательства и кнопки.</p></li>
+            <li><svg class="tile-icon"><use href="#icon-brush"></use></svg><span>03</span><h3>Дизайн и сборка</h3><p>Делаем визуал, адаптив, анимации и интеграции.</p></li>
+            <li><svg class="tile-icon"><use href="#icon-check"></use></svg><span>04</span><h3>Запуск</h3><p>Проверяем формы, скорость, аналитику и передаем сайт.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section conversion-bridge">
+        <div class="container bridge-grid">
+          <div>
+            <span class="section-num">09 /</span>
+            <h2>Можно начать с короткой оценки</h2>
+            <p class="large-text">Если у вас уже есть ниша, я задам 5 вопросов и скажу, что нужно: лендинг, сайт услуг, каталог или отдельный AI-агент.</p>
+            <a class="button primary" href="#contact">Получить оценку проекта</a>
+          </div>
+          <div class="faq-list" aria-label="Частые вопросы">
+            <details open><summary>Сколько занимает запуск?</summary><p>Обычно 3-14 дней. Точный срок зависит от количества блоков, материалов и интеграций.</p></details>
+            <details><summary>Можно без готового ТЗ?</summary><p>Да. Я помогу собрать структуру, оффер, тексты и список материалов для старта.</p></details>
+            <details><summary>Что нужно от клиента?</summary><p>Описание услуги, примеры конкурентов, контакты, цены или хотя бы ориентиры по форматам работы.</p></details>
+            <details><summary>Можно подключить Telegram или CRM?</summary><p>Да. Формы можно отправлять в почту, Telegram, CRM или другую систему заявок.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section delivery-proof">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-num">10 /</span>
+              <h2>Что клиент получает после запуска</h2>
+            </div>
+            <p>Не только ссылку на сайт. Нужен понятный набор, с которым можно сразу идти в рекламу, клиентские переписки и партнерские презентации.</p>
+          </div>
+          <div class="delivery-grid">
+            <article><span>01</span><h3>Рабочая форма заявки</h3><p>Письмо, Telegram, CRM или другой маршрут, чтобы лид не потерялся после клика.</p></article>
+            <article><span>02</span><h3>Адаптив и скорость</h3><p>Проверка на телефоне и десктопе, оптимизация медиа, аккуратная загрузка видео.</p></article>
+            <article><span>03</span><h3>Материалы для показа</h3><p>Ссылка, превью, короткое объяснение кейса и список следующих улучшений.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <span class="section-num">11 /</span>
+            <h2>Расскажите о задаче</h2>
+            <p>Подскажу формат, сроки и примерный бюджет. Ответ обычно в течение дня.</p>
+            <div class="contact-links">
+              <a href="mailto:bul82@yandex.ru">bul82@yandex.ru</a>
+            </div>
+          </div>
+          <form class="lead-form" data-lead-form>
+            <fieldset class="quick-choice">
+              <legend>Что нужно</legend>
+              <label><input type="checkbox" name="type" value="Лендинг или сайт услуг"><span>Лендинг / сайт</span></label>
+              <label><input type="checkbox" name="type" value="Каталог"><span>Каталог</span></label>
+              <label><input type="checkbox" name="type" value="AI-агент"><span>AI-агент</span></label>
+              <label><input type="checkbox" name="type" value="Нужна консультация"><span>Нужна консультация</span></label>
+            </fieldset>
+            <label><span>Имя</span><input name="name" type="text" placeholder="Как к вам обращаться" required></label>
+            <label><span>Контакт</span><input name="contact" type="text" placeholder="Telegram, телефон или email" required></label>
+            <label><span>Задача</span><textarea name="message" placeholder="Ниша, цель сайта, желаемый срок"></textarea></label>
+            <button class="button primary" type="submit">Получить оценку проекта</button>
+            <p class="form-note" data-form-note>Форма откроет готовое письмо. Можно написать напрямую на bul82@yandex.ru.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>BUL82 Web - лендинги, сайты услуг и AI-интеграции.</p>
+        <a href="#top">Наверх</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

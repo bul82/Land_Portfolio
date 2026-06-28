@@ -1,0 +1,173 @@
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+const filterButtons = document.querySelectorAll("[data-filter]");
+const caseCards = document.querySelectorAll(".portfolio .case-card");
+const previewCards = document.querySelectorAll(".case-card, .ai-showcase");
+const leadForm = document.querySelector("[data-lead-form]");
+const formNote = document.querySelector("[data-form-note]");
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = mobileMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+mobileMenu?.addEventListener("click", (event) => {
+  if (event.target.matches("a")) {
+    mobileMenu.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
+});
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+
+    caseCards.forEach((card) => {
+      const shouldShow = filter === "all" || card.dataset.category === filter;
+      card.classList.toggle("hidden", !shouldShow);
+      const video = card.querySelector("video");
+      if (video && !shouldShow) {
+        video.pause();
+        video.currentTime = 0;
+        card.classList.remove("is-playing");
+      }
+    });
+  });
+});
+
+previewCards.forEach((card) => {
+  const video = card.querySelector("video");
+  if (!video) return;
+
+  const resetOtherPreviews = () => {
+    previewCards.forEach((otherCard) => {
+      if (otherCard === card) return;
+
+      const otherVideo = otherCard.querySelector("video");
+      if (!otherVideo) return;
+
+      otherVideo.pause();
+      otherVideo.currentTime = 0;
+      otherCard.classList.remove("is-playing");
+    });
+  };
+
+  const playPreview = () => {
+    resetOtherPreviews();
+    card.classList.add("is-playing");
+    video.play().catch(() => {});
+  };
+
+  const stopPreview = () => {
+    video.pause();
+    video.currentTime = 0;
+    card.classList.remove("is-playing");
+  };
+
+  card.addEventListener("mouseenter", playPreview);
+  card.addEventListener("mouseleave", stopPreview);
+  card.addEventListener("focusin", playPreview);
+  card.addEventListener("focusout", stopPreview);
+});
+
+leadForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = new FormData(leadForm);
+  const name = data.get("name")?.toString().trim();
+  const contact = data.get("contact")?.toString().trim();
+  const types = data.getAll("type").map((item) => item.toString()).join(", ") || "Не выбрано";
+  const message = data.get("message")?.toString().trim() || "Пока без подробностей.";
+  const subject = encodeURIComponent("Оценка проекта");
+  const body = encodeURIComponent(`Имя: ${name}\nКонтакт: ${contact}\nТип проекта: ${types}\n\nЗадача:\n${message}`);
+
+  window.location.href = `mailto:bul82@yandex.ru?subject=${subject}&body=${body}`;
+  formNote.textContent = "Готово: письмо сформировано. Если почтовый клиент не открылся, напишите на bul82@yandex.ru.";
+});
+
+// Remove target="_blank" inside Telegram to ensure links open reliably in-app
+if (navigator.userAgent.includes("Telegram")) {
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && (link.hostname === window.location.hostname || href.startsWith("/") || !href.startsWith("http"))) {
+      link.removeAttribute("target");
+    }
+  });
+}
+
+// --- 3D Parallax Tilt & Custom Cursor Logic (Desktop only) ---
+if (window.matchMedia("(pointer: fine)").matches) {
+  // 1. Create and append cursor elements
+  const cursorRing = document.createElement("div");
+  cursorRing.className = "custom-cursor-ring";
+  const cursorDot = document.createElement("div");
+  cursorDot.className = "custom-cursor-dot";
+  document.body.appendChild(cursorRing);
+  document.body.appendChild(cursorDot);
+
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Position dot immediately
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+  });
+
+  // Smooth trail for the ring
+  function animateCursor() {
+    const delay = 6; // lower value = faster following
+    ringX += (mouseX - ringX) / delay;
+    ringY += (mouseY - ringY) / delay;
+    
+    cursorRing.style.left = `${ringX}px`;
+    cursorRing.style.top = `${ringY}px`;
+    
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Attach hover events for links and buttons
+  const hoverTargets = document.querySelectorAll("a, button, select, input, textarea, label, [data-menu-toggle]");
+  hoverTargets.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursorRing.classList.add("cursor-hover");
+      if (el.closest(".case-card") || el.closest(".ai-showcase")) {
+        cursorRing.classList.add("cursor-card-hover");
+        cursorRing.setAttribute("data-label", "Открыть");
+      }
+    });
+    el.addEventListener("mouseleave", () => {
+      cursorRing.classList.remove("cursor-hover");
+      cursorRing.classList.remove("cursor-card-hover");
+      cursorRing.removeAttribute("data-label");
+    });
+  });
+
+  // 2. 3D Parallax Tilt Effect on Case Cards
+  const tiltCards = document.querySelectorAll(".case-card a, .ai-showcase a");
+  tiltCards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xc = rect.width / 2;
+      const yc = rect.height / 2;
+      // Calculate rotation angles (divided by 15 for soft effect)
+      const angleX = (yc - y) / 15;
+      const angleY = (x - xc) / 15;
+      
+      card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.015, 1.015, 1.015)`;
+    });
+    
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    });
+  });
+}

@@ -1,0 +1,75 @@
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+const filterButtons = document.querySelectorAll("[data-filter]");
+const caseCards = document.querySelectorAll(".portfolio .case-card");
+const previewCards = document.querySelectorAll(".case-card, .ai-showcase");
+const leadForm = document.querySelector("[data-lead-form]");
+const formNote = document.querySelector("[data-form-note]");
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = mobileMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+mobileMenu?.addEventListener("click", (event) => {
+  if (event.target.matches("a")) {
+    mobileMenu.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
+});
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+
+    caseCards.forEach((card) => {
+      const shouldShow = filter === "all" || card.dataset.category === filter;
+      card.classList.toggle("hidden", !shouldShow);
+      const video = card.querySelector("video");
+      if (video && !shouldShow) {
+        video.pause();
+        video.currentTime = 0;
+        card.classList.remove("is-playing");
+      }
+    });
+  });
+});
+
+previewCards.forEach((card) => {
+  const video = card.querySelector("video");
+  if (!video) return;
+
+  const playPreview = () => {
+    card.classList.add("is-playing");
+    video.play().catch(() => {});
+  };
+
+  const stopPreview = () => {
+    video.pause();
+    video.currentTime = 0;
+    card.classList.remove("is-playing");
+  };
+
+  card.addEventListener("mouseenter", playPreview);
+  card.addEventListener("mouseleave", stopPreview);
+  card.addEventListener("focusin", playPreview);
+  card.addEventListener("focusout", stopPreview);
+});
+
+leadForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = new FormData(leadForm);
+  const name = data.get("name")?.toString().trim();
+  const contact = data.get("contact")?.toString().trim();
+  const types = data.getAll("type").map((item) => item.toString()).join(", ") || "Не выбрано";
+  const message = data.get("message")?.toString().trim() || "Пока без подробностей.";
+  const subject = encodeURIComponent("Оценка проекта");
+  const body = encodeURIComponent(`Имя: ${name}\nКонтакт: ${contact}\nТип проекта: ${types}\n\nЗадача:\n${message}`);
+
+  window.location.href = `mailto:bul82@yandex.ru?subject=${subject}&body=${body}`;
+  formNote.textContent = "Готово: письмо сформировано. Если почтовый клиент не открылся, напишите на bul82@yandex.ru.";
+});
