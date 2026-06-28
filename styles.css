@@ -2667,7 +2667,7 @@ h1 {
 }
 
 .case-card .case-media {
-  aspect-ratio: 1 / 0.72 !important;
+  aspect-ratio: 1.6 / 1 !important;
   width: 100% !important;
   position: relative !important;
 }
