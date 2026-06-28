@@ -3,101 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт-портфолио разработчиков</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <title>Сайт-портфолио</title>
 </head>
 <body>
     <header class="hero">
-        <h1 class="hero-title">Портфолио разработчиков</h1>
-        <p class="hero-subtitle">8 успешных проектов, которые решают реальные задачи.</p>
-        <a href="#contact" class="cta-button">Заказать разработку за 1 минуту</a>
+        <h1 class="hero-title">Портфолио нашей команды</h1>
+        <p class="hero-subtitle">8 успешных проектов, которые мы реализовали за 2023 год</p>
+        <button class="cta-button">Заказать разработку за 1 минуту</button>
     </header>
-    <main>
-        <section class="projects">
-            <h2>Наши проекты</h2>
-            <p>Мы создали 8 проектов в разных сферах, от груминга до кондитерских.</p>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="grooming.jpg" alt="Груминг" class="project-image">
-                    <h3>Груминг</h3>
-                    <p>Удобное приложение для владельцев животных.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="language_school.jpg" alt="Языковая школа" class="project-image">
-                    <h3>Языковая школа</h3>
-                    <p>Онлайн-курсы для всех уровней.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="eco_market.jpg" alt="Эко-маркет" class="project-image">
-                    <h3>Эко-маркет</h3>
-                    <p>Магазин экологически чистых продуктов.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="land_lawyer.jpg" alt="Земельный юрист" class="project-image">
-                    <h3>Земельный юрист</h3>
-                    <p>Консультации по земельным вопросам.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="detailing.jpg" alt="Детейлинг" class="project-image">
-                    <h3>Детейлинг</h3>
-                    <p>Услуги по уходу за автомобилем.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="beauty_salon.jpg" alt="Бьюти-салон" class="project-image">
-                    <h3>Бьюти-салон</h3>
-                    <p>Услуги красоты и ухода.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="cleaning.jpg" alt="Клининг" class="project-image">
-                    <h3>Клининг</h3>
-                    <p>Услуги по уборке помещений.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
-                <div class="project-card">
-                    <img src="confectionery.jpg" alt="Кондитерская" class="project-image">
-                    <h3>Кондитерская</h3>
-                    <p>Вкусные десерты на заказ.</p>
-                    <button class="action-button">Посмотреть проект</button>
-                </div>
+
+    <section class="projects">
+        <h2>Наши проекты</h2>
+        <p>Мы создали 8 уникальных проектов в различных сферах:</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="grooming.jpg" alt="Груминг" class="project-image">
+                <h3>Груминг</h3>
+                <p>Удобный сервис для владельцев животных.</p>
+                <button class="project-button">Посмотреть проект</button>
             </div>
-        </section>
-        <section class="approach">
-            <h2>Наш подход</h2>
-            <p>Мы используем gstack и Anti-Slop для оптимизации разработки.</p>
-            <ul>
-                <li>Скорость загрузки страниц до 2 секунд</li>
-                <li>Четкая структура кода для легкой поддержки</li>
-            </ul>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Связаться с нами</h2>
-            <p>Заполните форму, чтобы получить консультацию по разработке.</p>
-            <form action="/submit" method="POST">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required>
-                <label for="time">Время:</label>
-                <input type="time" id="time" name="time" required>
-                <label>
-                    <input type="checkbox" name="privacy" required>
-                    Я согласен на обработку персональных данных <a href="privacy.html">(политика конфиденциальности)</a>
-                </label>
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-    </main>
+            <div class="project-card">
+                <img src="language_school.jpg" alt="Языковая школа" class="project-image">
+                <h3>Языковая школа</h3>
+                <p>Эффективное обучение языкам.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="eco_market.jpg" alt="Эко-маркет" class="project-image">
+                <h3>Эко-маркет</h3>
+                <p>Товары для заботы о природе.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="land_lawyer.jpg" alt="Земельный юрист" class="project-image">
+                <h3>Земельный юрист</h3>
+                <p>Помощь в правовых вопросах.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="detailing.jpg" alt="Детейлинг" class="project-image">
+                <h3>Детейлинг</h3>
+                <p>Профессиональный уход за автомобилем.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="beauty_salon.jpg" alt="Бьюти-салон" class="project-image">
+                <h3>Бьюти-салон</h3>
+                <p>Услуги красоты и ухода.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="cleaning.jpg" alt="Клининг" class="project-image">
+                <h3>Клининг</h3>
+                <p>Уборка и чистота в вашем доме.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+            <div class="project-card">
+                <img src="confectionery.jpg" alt="Кондитерская" class="project-image">
+                <h3>Кондитерская</h3>
+                <p>Сладости на любой вкус.</p>
+                <button class="project-button">Посмотреть проект</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="approach">
+        <h2>Наш подход</h2>
+        <p>Мы применяем передовые методологии для достижения высоких результатов:</p>
+        <ul>
+            <li>Методология gstack для гибкости процессов разработки.</li>
+            <li>Применение Anti-Slop для упрощения взаимодействия с клиентами.</li>
+            <li>Оптимизация скорости для быстрого достижения целей.</li>
+        </ul>
+    </section>
+
+    <section class="contact-form">
+        <h2>Связаться с нами</h2>
+        <p>Мы готовы обсудить ваш проект и ответить на вопросы.</p>
+        <form id="feedback-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required>
+            <label>
+                <input type="checkbox" name="privacy" required>
+                Я согласен на обработку персональных данных
+            </label>
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2023 Сайт-портфолио разработчиков</p>
+        <p>Напишите в Telegram: <a href="https://t.me/DenVolodins">@DenVolodins</a></p>
     </footer>
     <script src="script.js"></script>
 </body>

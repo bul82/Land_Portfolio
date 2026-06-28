@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS feedback (
+CREATE TABLE IF NOT EXISTS requests (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     email TEXT NOT NULL,
     message TEXT NOT NULL,
-    consent BOOLEAN NOT NULL
+    consent INTEGER NOT NULL
 );

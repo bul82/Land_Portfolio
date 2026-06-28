@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // JavaScript code can be added here if needed
+document.getElementById('feedback-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Здесь будет логика отправки формы на бэкенд
+    alert('Форма отправлена!');
 });
