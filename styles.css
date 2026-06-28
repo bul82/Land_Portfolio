@@ -555,13 +555,24 @@ h2 {
   gap: 22px;
 }
 
+/* ==========================================================================
+   ⚠️  NO-CROP SCREENSHOT RULE — AGENTS.md §"No-Crop Screenshot & Preview Rule"
+   -------------------------------------------------------------------------
+   ЗАПРЕЩЕНО:
+     - object-fit: cover  →  обрезает текст на скриншотах сайтов.
+
+   ОБЯЗАТЕЛЬНО:
+     - object-fit: contain  →  скриншот виден на 100%, без обрезки.
+     - background-color совпадает с фоном скриншота (бесшовное слияние).
+     - aspect-ratio: 1.6 / 1  (или 16/10) для десктопных превью.
+   ========================================================================== */
 .case-media {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--soft);
-  aspect-ratio: 1 / 0.84;
+  aspect-ratio: 1.6 / 1;
 }
 
 .case-media::before {
